@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurelio — Seleção de Dificuldade</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      background: rgb(13, 11, 20);
+      font-family: Inter, system-ui, sans-serif;
+      color: #e6eef8;
+    }
+    header{
+      background: rgb(22, 19, 32);
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 130px;
+    }
+    div{
+      position: relative;
+      width: 1440px;
+      margin: 0 auto;
+    }
+    nav{
+      position: absolute;
+            top: 38px;
+            right: 0;
+    }
+    nav li{
+      display: inline;
+
+      font-size: 24px;
+
+      margin: 0 0 0 25px;
+    }
+    nav a{
+      text-transform: uppercase;
+      color: #e6eef8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a:hover{
+      color:  #050508e7;
+      text-decoration: underline;
+    }
+    h1 {
+      position: absolute;
+      left: 0px;
+      top: 4px;
+      font-size: 45px;
+    }
+    h2{
+        font-size: 28px;
+      margin-bottom: 130px;
+      position: absolute;
+    }
+    .button {
+      background: #000000;
+      color: #e6eef8;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 32px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      background: #8aadff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+    <h1>Aurelio</h1>
+    <nav>
+      <ul>
+        <li><a href="">modos</a></li>
+        <li><a href="">sobre</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <h2>Escolha a Dificuldade</h2>
+
+  <button class="button" onclick="selecionarModo('facil')">Fácil</button>
+  <button class="button" onclick="selecionarModo('dificil')">Difícil</button>
+
+
+  <script>
+    function selecionarModo(modo) {
+      window.location.href = 'index.html?modo=' + modo;
+    }
+  </script>
+</body>
+</html>
